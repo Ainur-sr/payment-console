@@ -1,0 +1,49 @@
+*/target/*
+.idea/*
+*.mvn
+atlassian-ide-plugin.xml
+*.orig
+/logs/*
+*/logs/*
+target/*
+rebel.xml
+*/bin/*
+*/build/*
+.settings/*
+.svn/*
+*/.settings/*
+*/.svn/*
+.classpath
+*.log
+/target/
+
+mvnw
+mvnw.cmd
+
+### STS ###
+.apt_generated
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
