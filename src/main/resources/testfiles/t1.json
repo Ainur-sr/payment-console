@@ -1,0 +1,14 @@
+[
+  {
+    "orderId": 13,
+    "amount": 110.50,
+    "currency": "RUB",
+    "comment": "Отсутствие отклонений"
+  },
+  {
+    "orderId": 12,
+    "amount": 90.10,
+    "currency": "USD",
+    "comment": "Оплата задолженности"
+  }
+]

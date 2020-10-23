@@ -28,6 +28,6 @@ public class PaymentJsonServiceImpl implements PaymentJsonService {
         List<PaymentJsonEntity> paymentEntities = objectMapper.readValue(new FileReader(file),
                 new TypeReference<List<PaymentJsonEntity>>() {
                 });
-        return paymentMapper.toDomainFromJSON(paymentEntities);
+        return paymentMapper.toDomainFromJSON(paymentEntities, file.getName());
     }
 }

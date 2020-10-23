@@ -33,6 +33,11 @@ public class Payment {
     private Long line;
 
     /**
+     * Имя исходного файла
+     */
+    private String fileName;
+
+    /**
      * результат парсинга записи исходного файла
      */
     private String result;
@@ -44,6 +49,7 @@ public class Payment {
                 ", \"currency\": \"" + currency + '\"' +
                 ", \"comment\": \"" + comment + '\"' +
                 ", \"line\": " + line +
+                ", \"fileName\": \"" + fileName + '\"' +
                 ", \"result\": \"" + result + '\"' +
                 '}';
     }

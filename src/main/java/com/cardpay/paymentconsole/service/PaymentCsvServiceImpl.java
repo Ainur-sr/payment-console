@@ -24,6 +24,6 @@ public class PaymentCsvServiceImpl implements PaymentCsvService {
         CsvToBeanBuilder<PaymentCsvEntity> csvToBeanBuilder
                 = new CsvToBeanBuilder<PaymentCsvEntity>(new FileReader(file));
         List<PaymentCsvEntity> paymentCSVEntities = csvToBeanBuilder.withType(PaymentCsvEntity.class).build().parse();
-        return paymentMapper.toDomainFromCSV(paymentCSVEntities);
+        return paymentMapper.toDomainFromCSV(paymentCSVEntities, file.getName());
     }
 }

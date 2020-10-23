@@ -12,7 +12,7 @@ import java.util.List;
 @Component
 public class PaymentMapper {
 
-    public List<Payment> toDomainFromCSV(List<PaymentCsvEntity> paymentCSVEntities) {
+    public List<Payment> toDomainFromCSV(List<PaymentCsvEntity> paymentCSVEntities, String fileName) {
         List<Payment> resultList = new ArrayList<>();
         if (!CollectionUtils.isEmpty(paymentCSVEntities)) {
             for (int i = 0; i < paymentCSVEntities.size(); i++) {
@@ -23,6 +23,7 @@ public class PaymentMapper {
                         .setCurrency(paymentCSVEntities.get(i).getCurrency())
                         .setComment(paymentCSVEntities.get(i).getComment())
                         .setLine((long) i + 1)
+                        .setFileName(fileName)
                         .setResult("OK");
                 resultList.add(payment);
             }
@@ -31,7 +32,7 @@ public class PaymentMapper {
         return resultList;
     }
 
-    public List<Payment> toDomainFromJSON(List<PaymentJsonEntity> paymentEntities) {
+    public List<Payment> toDomainFromJSON(List<PaymentJsonEntity> paymentEntities, String fileName) {
         List<Payment> resultList = new ArrayList<>();
         if (!CollectionUtils.isEmpty(paymentEntities)) {
             for (int i = 0; i < paymentEntities.size(); i++) {
@@ -42,6 +43,7 @@ public class PaymentMapper {
                         .setCurrency(paymentEntities.get(i).getCurrency())
                         .setComment(paymentEntities.get(i).getComment())
                         .setLine((long) i + 1)
+                        .setFileName(fileName)
                         .setResult("OK");
                 resultList.add(payment);
             }

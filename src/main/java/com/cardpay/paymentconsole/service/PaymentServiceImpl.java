@@ -100,7 +100,7 @@ public class PaymentServiceImpl implements PaymentService {
         String resultStr = null;
         if (!StringUtils.isEmpty(fileName)) {
             int index = fileName.lastIndexOf('.');
-            resultStr = index == -1 ? null : fileName.substring(index);
+            resultStr = index == -1 ? null : fileName.substring(index+1);
         }
         return resultStr;
     }
