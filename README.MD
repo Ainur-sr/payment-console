@@ -25,5 +25,5 @@
 * OK - если запись конвертирована корректно, 
 или описание ошибки если запись не удалось конвертировать.
 
-Пример команды запуска: "java -jar orders_parser.jar orders1.csv orders2.json"  
+Пример команды запуска: "java -jar payment-console-1.0.jar orders1.csv orders2.json"  
 (orders1.csv  и orders2.json  файлы для парсинга).
